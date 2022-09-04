@@ -1,0 +1,39 @@
+.home{
+    padding-top: 10px;
+    color: rgba(241, 242, 245, 0.993);
+    font-family: Cambria;
+    font-style: normal;
+    font-size: 50px;
+}
+
+.teacher{
+    margin-top: 100px;
+    float: left;
+    margin-left: 200px;
+    
+}
+
+.line{
+    display: inline-block;
+    height: 500px;
+    border-left: 3px solid white;
+}
+
+.student{
+    margin-top: 100px;
+    float: right;
+    margin-right: 200px;
+}
+
+.body
+{
+    background-color: black;
+    margin-top: 50px;
+}
+
+.foot{
+    height: 100px;
+    width: 100%;
+    background-color: black;
+}
+
