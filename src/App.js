@@ -9,6 +9,8 @@ import Error from './component/Error';
 import Teacherviewform from './component/Teacherviewform';
 import Studentview from './component/Studentview';
 import { propTypes } from 'react-bootstrap/esm/Image';
+import Addstudent from './component/Addstudent';
+import AddTeacher from './component/AddTeacher';
 
 
 function App() {
@@ -22,6 +24,8 @@ function App() {
           <Route path='/Students' element={<Students />} />
           <Route path='/Teacherviewform/:id' element={<Teacherviewform />} />
           <Route path='/Studentview/:id' element={<Studentview />} />
+          <Route path='/Addstudent' element={<Addstudent />} />
+          <Route path='/AddTeacher' element={<AddTeacher />} />
           <Route path='*' element={<Error />} />
         </Routes>
       </BrowserRouter>

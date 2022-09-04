@@ -66,7 +66,7 @@ function Students(Props) {
                         )
                     }
                 </select>
-                <Button style={{ float: "right", marginRight: "5px", marginTop: "1px" }}>Add Student</Button>
+                <Link to={"/Addstudent"}><Button style={{ float: "right", marginRight: "5px", marginTop: "1px" }}>Add Student</Button></Link>
             </div>
             <br />
             <table class="table border shadow table-hover">

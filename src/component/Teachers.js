@@ -53,7 +53,7 @@ class Teachers extends React.Component {
         // }
 
         function handlesort(e) {
-            this.setState({ sort1: (e.target.value) })
+            this.setState({ sort1: e.target.value })
             fetch("https://jsonplaceholder.typicode.com/users?_sort=" + e.target.value + "&_order=asc").then((result) => {
                 result.json().then((resp) => {
                     this.setState({ data: (resp) })
@@ -75,7 +75,7 @@ class Teachers extends React.Component {
                             )
                         }
                     </select>
-                    <Button style={{ float: "right", marginRight: "10px", marginTop: "1px" }}>Add Teacher</Button>
+                    <Link to={"/AddTeacher"}><Button style={{ float: "right", marginRight: "10px", marginTop: "1px" }}>Add Teacher</Button></Link>
                 </div>
                 <br />
                 <table class="table border shadow table-hover">
