@@ -1,8 +1,9 @@
-import { Link } from 'react-router-dom';
+import { Link, useParams, useHistory } from 'react-router-dom';
 import React, { useState, useEffect } from "react";
-import { useParams } from 'react-router-dom';
 
 function Editteacher() {
+
+    let history = useHistory();
 
     let [data, setData] = useState({
         id: "",
@@ -22,27 +23,34 @@ function Editteacher() {
     useEffect(() => {
         fetch("https://jsonplaceholder.typicode.com/users/" + id).then((result) => {
             result.json().then((resp) => {
-                    setData({
-                        id: (resp.id),
-                        name: (resp.name),
-                        email: (resp.email),
-                        website: (resp.website)
-                    })
+                setData({
+                    id: (resp.id),
+                    name: (resp.name),
+                    email: (resp.email),
+                    website: (resp.website)
+                })
             })
         })
     }, [])
 
-    function handlesubmit(e) {
+    async function handlesubmit(e) {
         e.preventDefault();
-        fetch("https://jsonplaceholder.typicode.com/users/" + id, 
-        {method:'PUT'})
-        
-        .then((result) => {
-            result.json().then((resp) => {
-
+        await fetch("https://jsonplaceholder.typicode.com/users/" + id,
+            {
+                method: 'PUT',
+                headers:
+                    { 'Content-Type': 'application/json' },
+                body:
+                    JSON.stringify({ data1 })
             })
-        })
+
+            .then((result) => {
+                result.json().then((resp) => {
+
+                })
+            })
         alert("submitted")
+        // history.push("/");
     }
 
 
@@ -53,9 +61,9 @@ function Editteacher() {
                 <form className="form border shadow form-hover" onSubmit={handlesubmit} style={{ height: "450px", width: "60%", backgroundColor: "rgba(110, 113, 122, 0.993)", borderRadius: "10px" }}>
                     <div style={{ marginTop: "50px" }}>
                         <input type="text" style={{ width: "60%" }} value={data.id} /><br /><br /><br />
-                        <input type="text" style={{ width: "60%" }} placeholder={data.name} onChange={(e)=>setData1({name:e.target.value})} /><br /><br /><br />
-                        <input type="text" style={{ width: "60%" }} placeholder={data.email} onChange={(e)=>setData1({email:e.target.value})} /><br /><br /><br />
-                        <input type="text" style={{ width: "60%" }} placeholder={data.website} onChange={(e)=>setData1({website:e.target.value})} /><br /><br /><br />
+                        <input type="text" style={{ width: "60%" }} placeholder={data.name} onChange={(e) => setData1({ name: e.target.value })} /><br /><br /><br />
+                        <input type="text" style={{ width: "60%" }} placeholder={data.email} onChange={(e) => setData1({ email: e.target.value })} /><br /><br /><br />
+                        <input type="text" style={{ width: "60%" }} placeholder={data.website} onChange={(e) => setData1({ website: e.target.value })} /><br /><br /><br />
                         <button className="btn btn-primary" style={{ width: "30%" }}>Submit</button>
                     </div>
                 </form>
