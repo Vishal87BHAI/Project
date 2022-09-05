@@ -11,7 +11,8 @@ import Studentview from './component/Studentview';
 import { propTypes } from 'react-bootstrap/esm/Image';
 import Addstudent from './component/Addstudent';
 import AddTeacher from './component/AddTeacher';
-
+import Editteacher from './component/Editteacher';
+import Editstudent from './component/Editstudent';
 
 function App() {
   return (
@@ -26,6 +27,8 @@ function App() {
           <Route path='/Studentview/:id' element={<Studentview />} />
           <Route path='/Addstudent' element={<Addstudent />} />
           <Route path='/AddTeacher' element={<AddTeacher />} />
+          <Route path='/Editteacher/:id' element={<Editteacher />} />
+          <Route path='/Editstudent' element={<Editstudent />} />
           <Route path='*' element={<Error />} />
         </Routes>
       </BrowserRouter>

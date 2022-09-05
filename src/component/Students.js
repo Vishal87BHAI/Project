@@ -25,7 +25,7 @@ function Students(Props) {
             method: 'DELETE'
         }).then((result) => {
             result.json().then((resp) => {
-                alert(id + " ID deleted")
+                alert(id + " ID deleted")  
             })
         })
         getdata();
@@ -66,7 +66,7 @@ function Students(Props) {
                         )
                     }
                 </select>
-                <Link to={"/Addstudent"}><Button style={{ float: "right", marginRight: "5px", marginTop: "1px" }}>Add Student</Button></Link>
+                <Link to={"/Addstudent"}><Button style={{ float: "right", marginRight: "90px", marginTop: "1px" }}>Add Student</Button></Link>
             </div>
             <br />
             <table class="table border shadow table-hover">
@@ -88,7 +88,7 @@ function Students(Props) {
                                 <td>{item.title}</td>
                                 <td>{item.completed ? "Complete" : "in Progress"}</td>
                                 <td><Link to={"/Studentview/" + item.id}><Button style={{ marginRight: "5px" }}>View</Button></Link>
-                                    <Button class="button bg-primary" style={{ marginRight: "5px" }}>Edit</Button>
+                                    <Link to={"/Editstudent"}><Button class="button bg-primary" style={{ marginRight: "5px" }}>Edit</Button></Link>
                                     <Button class="button bg-primary" onClick={() => deletedata(item.id)}>Delete</Button></td>
                             </tr>
 

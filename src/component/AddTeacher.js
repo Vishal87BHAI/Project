@@ -8,6 +8,7 @@ function AddTeacher() {
         alert("submitted")
     }
 
+
     return (
         <div style={{ marginTop: "70px" }}>
             <h1>Add Teacher</h1><br />
