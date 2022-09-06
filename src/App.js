@@ -28,7 +28,7 @@ function App() {
           <Route path='/Addstudent' element={<Addstudent />} />
           <Route path='/AddTeacher' element={<AddTeacher />} />
           <Route path='/Editteacher/:id' element={<Editteacher />} />
-          <Route path='/Editstudent' element={<Editstudent />} />
+          <Route path='/Editstudent/:id' element={<Editstudent />} />
           <Route path='*' element={<Error />} />
         </Routes>
       </BrowserRouter>

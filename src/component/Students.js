@@ -88,7 +88,7 @@ function Students(Props) {
                                 <td>{item.title}</td>
                                 <td>{item.completed ? "Complete" : "in Progress"}</td>
                                 <td><Link to={"/Studentview/" + item.id}><Button style={{ marginRight: "5px" }}>View</Button></Link>
-                                    <Link to={"/Editstudent"}><Button class="button bg-primary" style={{ marginRight: "5px" }}>Edit</Button></Link>
+                                    <Link to={"/Editstudent/"+item.id}><Button class="button bg-primary" style={{ marginRight: "5px" }}>Edit</Button></Link>
                                     <Button class="button bg-primary" onClick={() => deletedata(item.id)}>Delete</Button></td>
                             </tr>
 
