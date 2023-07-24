@@ -1,8 +1,10 @@
 import React from 'react'
+import { Button } from 'react-bootstrap';
 
 const Home = () => {
     const logout=()=>{
-        localStorage.removeItem("signup")
+        localStorage.removeItem("username");
+        localStorage.removeItem("password");
         window.location.reload()
     }
     const deleteAccount=()=> {
@@ -14,8 +16,8 @@ const Home = () => {
 
     <h1>HOMEPAGE</h1>
     <p>WELCOME TO HOMEPAGE</p>
-    <button onClick={logout}>logout</button>
-    <button onClick={deleteAccount}>Delete account</button> 
+    <Button className='me-2' onClick={logout}>logout</Button>
+    <Button onClick={deleteAccount}>Delete account</Button> 
     </div>
   )
 }
