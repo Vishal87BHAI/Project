@@ -12,10 +12,11 @@ import AddTeacher from './component/AddTeacher';
 import Editteacher from './component/Editteacher';
 import Editstudent from './component/Editstudent';
 import LoginForm from './component/jaggi-don/LoginForm';
+import Login from './component/jaggi-don/Login';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App mt-5 pt-5">
       <BrowserRouter>
         <Navbarcomp />
         <Routes>
@@ -29,6 +30,7 @@ function App() {
           <Route path='/Editteacher/:id' element={<Editteacher />} />
           <Route path='/Editstudent/:id' element={<Editstudent />} />
           <Route path='/Jaggi' element={<LoginForm />} />
+          <Route path='/login' element={<Login />} />
           <Route path='*' element={<Error />} />
         </Routes>
       </BrowserRouter>

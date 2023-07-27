@@ -2,6 +2,7 @@ import React from "react";
 import { Button } from "react-bootstrap";
 
 const Home = () => {
+
   const logout = () => {
     localStorage.removeItem("username");
     localStorage.removeItem("password");
@@ -19,7 +20,7 @@ const Home = () => {
       <Button className="me-2" onClick={logout}>
         logout
       </Button>
-      <Button onClick={deleteAccount}>Delete account</Button>
+      <Button onClick={deleteAccount}>Delete account</Button> <br /><br />
     </div>
   );
 };

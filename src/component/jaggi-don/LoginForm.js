@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Alert, Button, Form } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 import Home from "./Home";
 
 const LoginForm = () => {
@@ -7,6 +8,8 @@ const LoginForm = () => {
   const password = useRef();
   const [showHome, setShowHome] = useState(false);
   const [alert, setAlert] = useState(null);
+
+  const navigate = useNavigate();
 
   const localSign = localStorage.getItem("username");
 
@@ -72,6 +75,7 @@ const LoginForm = () => {
             </Button>
           </Form>
         )}
+        <Button className="mt-3" onClick={() => { navigate('/login') }}>New Login With Reducer</Button>
       </div>
     </div>
   );

@@ -69,8 +69,8 @@ function Students(Props) {
                 <Link to={"/Addstudent"}><Button style={{ float: "right", marginRight: "90px", marginTop: "1px" }}>Add Student</Button></Link>
             </div>
             <br />
-            <table class="table border shadow table-hover">
-                <thead class="table-dark">
+            <table className="table border shadow table-hover">
+                <thead className="table-dark">
                     <tr>
                         <th scope="col">User Id</th>
                         <th scope="col">Id</th>
@@ -88,8 +88,8 @@ function Students(Props) {
                                 <td>{item.title}</td>
                                 <td>{item.completed ? "Complete" : "in Progress"}</td>
                                 <td><Link to={"/Studentview/" + item.id}><Button style={{ marginRight: "5px" }}>View</Button></Link>
-                                    <Link to={"/Editstudent/"+item.id}><Button class="button bg-primary" style={{ marginRight: "5px" }}>Edit</Button></Link>
-                                    <Button class="button bg-primary" onClick={() => deletedata(item.id)}>Delete</Button></td>
+                                    <Link to={"/Editstudent/"+item.id}><Button className="button bg-primary" style={{ marginRight: "5px" }}>Edit</Button></Link>
+                                    <Button className="button bg-primary" onClick={() => deletedata(item.id)}>Delete</Button></td>
                             </tr>
 
                         )

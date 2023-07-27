@@ -78,8 +78,8 @@ class Teachers extends React.Component {
                     <Link to={"/AddTeacher"}><Button style={{ float: "right", marginRight: "130px", marginTop: "1px" }}>Add Teacher</Button></Link>
                 </div>
                 <br />
-                <table class="table border shadow table-hover">
-                    <thead class="table-dark">
+                <table className="table border shadow table-hover">
+                    <thead className="table-dark">
                         <tr>
                             <th scope="col">Id</th>
                             <th scope="col">Name</th>
@@ -109,8 +109,8 @@ class Teachers extends React.Component {
                                     <td>{item.email}</td>
                                     <td>{item.website}</td>
                                     <td><Link to={"/teacherviewform/" + item.id}><Button style={{ marginRight: "5px" }}>View</Button></Link>
-                                        <Link to={"/Editteacher/" + item.id}><Button class="button bg-primary" style={{ marginRight: "5px" }}>Edit</Button></Link>
-                                        <Button class="button bg-primary" onClick={() => deletedata(item.id)}>Delete</Button></td>
+                                        <Link to={"/Editteacher/" + item.id}><Button className="button bg-primary" style={{ marginRight: "5px" }}>Edit</Button></Link>
+                                        <Button className="button bg-primary" onClick={() => deletedata(item.id)}>Delete</Button></td>
 
 
                                 </tr>
