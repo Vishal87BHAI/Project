@@ -27,13 +27,6 @@
 
 .body
 {
-    background-color: black;
-    margin-top: 50px;
-}
-
-.foot{
-    height: 100px;
-    width: 100%;
-    background-color: black;
+    height: 100vh;
 }
 

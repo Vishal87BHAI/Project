@@ -62,7 +62,7 @@ class Teachers extends React.Component {
         }
 
         return (
-            <div style={{ marginTop: "50px" }}>
+            <div style={{  }}>
                 <br />
                 <div style={{ backgroundColor: "orange", height: "40px", marginLeft: "5px", marginRight: "5px", borderRadius: "10px" }}>
                     <input type="text" placeholder="Search" onChange={(e) => this.setState({ search: e.target.value })} style={{ marginTop: "5px", float: "left", marginLeft: "10px" }} />

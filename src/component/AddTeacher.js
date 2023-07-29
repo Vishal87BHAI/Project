@@ -14,7 +14,7 @@ function AddTeacher() {
             <h1>Add Teacher</h1><br />
             <div style={{ marginLeft: "28%" }}>
                 <form className="form border shadow form-hover" onSubmit={handlesubmit} style={{ height: "450px", width: "60%", backgroundColor: "rgba(110, 113, 122, 0.993)", borderRadius: "10px" }}>
-                    <div style={{ marginTop: "50px" }}>
+                    <div style={{  }}>
                         <input type="text" style={{ width: "60%" }} placeholder="Id" /><br /><br /><br />
                         <input type="text" style={{ width: "60%" }} placeholder="Enter Your Name" /><br /><br /><br />
                         <input type="text" style={{ width: "60%" }} placeholder="Enter Your Email" /><br /><br /><br />

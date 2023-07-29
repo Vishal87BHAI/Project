@@ -64,7 +64,7 @@ function Editteacher() {
             <h1>Edit Teacher</h1><br />
             <div style={{ marginLeft: "28%" }}>
                 <form className="form border shadow form-hover" onSubmit={handlesubmit} style={{ height: "450px", width: "60%", backgroundColor: "rgba(110, 113, 122, 0.993)", borderRadius: "10px" }}>
-                    <div style={{ marginTop: "50px" }}>
+                    <div style={{  }}>
                         <input type="text" style={{ width: "60%" }} value={data.id} /><br /><br /><br />
                         <input type="text" style={{ width: "60%" }} value={data.name} onChange={(e) => setData({ name: e.target.value })} /><br /><br /><br />
                         <input type="text" style={{ width: "60%" }} value={data.email} onChange={(e) => setData({ email: e.target.value })} /><br /><br /><br />

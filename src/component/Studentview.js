@@ -29,7 +29,7 @@ function Studentview() {
     
 
     return (
-        <div style={{ marginTop: "50px" }}>
+        <div style={{  }}>
             <br/><h1>Student</h1><br/>
             <ul className="list-group w-50" style={{display:"inline-block"}}>
                 

@@ -1,4 +1,3 @@
-import { Form } from 'react-bootstrap';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
@@ -31,7 +30,7 @@ function Teacherviewform() {
     
 
     return (
-        <div style={{ marginTop: "50px" }}>
+        <div style={{  }}>
             <br/><h1>Teacher</h1><br/>
             <ul className="list-group w-50" style={{display:"inline-block"}}>
                 <h5>Id</h5><li className="list-group-item active">{data.id}</li> <br/>
